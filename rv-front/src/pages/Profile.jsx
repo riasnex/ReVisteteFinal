@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import HeaderHome from '../components/HeaderHome';
-import QRCodeButton from '../components/QRCodeButton';
 import { garmentService } from '../services/api';
 import { User, Mail, Phone, MapPin, Package, Edit } from 'lucide-react';
 
@@ -62,13 +61,6 @@ const Profile = () => {
                   <h1 className="text-3xl font-bold text-gray-800">{user?.name}</h1>
                   <p className="text-gray-600">{user?.email}</p>
                 </div>
-              </div>
-              <div className="flex space-x-4">
-                <QRCodeButton />
-                <button className="btn-secondary flex items-center space-x-2">
-                  <Edit className="w-5 h-5" />
-                  <span>Editar Perfil</span>
-                </button>
               </div>
             </div>
 
